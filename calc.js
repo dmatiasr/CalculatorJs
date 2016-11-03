@@ -32,8 +32,8 @@ function result() {
 			wellFormed=true;
 			alert(wellFormed);
 		}
-		b=(check[0]=='*' ||check[0]=='-' || check[0]=='/' || check[0]=='+' ||check[0]=='%');
-		bb=(check[check.length-1]=='*' ||check[check.length-1]=='-' || check[check.length-1]=='/' || check[check.length-1]=='+' ||check[check.length-1]=='%');
+		b=(check[0]==',' || check[0]=='*' ||check[0]=='-' || check[0]=='/' || check[0]=='+' ||check[0]=='%');
+		bb=(check[0]==',' || check[check.length-1]=='*' ||check[check.length-1]=='-' || check[check.length-1]=='/' || check[check.length-1]=='+' ||check[check.length-1]=='%');
 		//first sign , last sign
 		if (b || bb){
 			wellFormed=false;
