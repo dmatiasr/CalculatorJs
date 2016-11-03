@@ -4,22 +4,12 @@
 	<meta charset="utf-8">
 	<title> Simple calculator</title>
 
-	<script type="text/javascript"></script>
+	<script type="text/javascript"> </script>
+	<script src="js/jquery-3.1.1.min.js" > </script>
 	<script src= "calc.js"> </script>
 
-	<style type="text/css">
-		input[type=button],input[type=text]{
-			width: 	100%;
-			height: 100%;
-			font-size: 30px;
-		}
-		table,form{
-			width: 300px;
-			height: 100px;
-			margin: 0 auto;
-		}
+	<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
 
-	</style>
 
 
 
@@ -29,33 +19,39 @@
 	<h1>Calculator</h1>
 	
 	
-	<table>
+	<table id="table">
 	<tr colspan="3"><input type="text" name="values" id="values"> </tr>
 
 	<tr>
-		<td><input type="button" value="+">  </td>
-		<td><input type="button" value="-">  </td>
-		<td><input type="button" value="*">  </td>
-		<td><input type="button" value="/"></td>
+		<td> <button type="button" onclick="operation();" > + </button>  </td>
+		<td> <button type="button" onclick="operation();" > - </button>  </td>
+		<td> <button type="button" onclick="operation();" > * </button>  </td>
+		<td> <button type="button" onclick="operation();" > / </button>  </td>
+
+
 	</tr>
 	<tr>
-		<td><input type="button" value="7">  </td>
-		<td><input type="button" value="8">  </td>
-		<td><input type="button" value="9"> </td>
-		<td><input type="button" value="C"> </td>
+
+		<td> <button type="button" onclick="addNumber();" > 7</button>  </td>
+		<td> <button type="button" onclick="addNumber();" > 8 </button>  </td>
+		<td> <button type="button" onclick="addNumber();" > 9 </button>  </td>
+		<td> <button type="button" onclick="clr();" > C </button>  </td>
+
 	</tr>
 	<tr>
-		<td><input type="button" value="4">  </td>
-		<td><input type="button" value="5"> </td>
-		<td><input type="button" value="6"> </td>
-		<td><input type="button" value="CE"> </td>
+		<td> <button type="button" onclick="addNumber();" > 4 </button>  </td>
+		<td> <button type="button" onclick="addNumber();" > 5 </button>  </td>
+		<td> <button type="button" onclick="addNumber();" > 6 </button>  </td>
+		<td> <button type="button" onclick="clr();" > CE </button>  </td>
+
 	</tr>
 
 	<tr>
-		<td><input type="button" value="0">  </td>
-		<td><input type="button" value="1">  </td>
-		<td><input type="button" value="2">  </td>
-		<td><input type="button" value="="></td>
+		<td> <button type="button" onclick="" > 0 </button>  </td>
+		<td> <button type="button" onclick="" > 1 </button>  </td>
+		<td> <button type="button" onclick="" > 2 </button>  </td>
+		<td> <button type="button" onclick="" > = </button>  </td>
+
 	</tr>
 
  </form>
