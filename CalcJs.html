@@ -23,34 +23,41 @@
 	<tr colspan="3"><input type="text" name="values" id="values"> </tr>
 
 	<tr>
-		<td> <button type="button" onclick="operation("+");" > + </button>  </td>
-		<td> <button type="button" onclick="operation("-");" > - </button>  </td>
-		<td> <button type="button" onclick="operation("*");" > * </button>  </td>
-		<td> <button type="button" onclick="operation("/");" > / </button>  </td>
+		<td> <button type="button" onclick="addDigit('+');" > + </button>  </td>
+		<td> <button type="button" onclick="addDigit('-');" > - </button>  </td>
+		<td> <button type="button" onclick="addDigit('*');" > * </button>  </td>
+		<td> <button type="button" onclick="addDigit('/');" > / </button>  </td>
 
 
 	</tr>
 	<tr>
 
-		<td> <button type="button" onclick="addNumber(7);" > 7</button>  </td>
-		<td> <button type="button" onclick="addNumber(8);" > 8 </button>  </td>
-		<td> <button type="button" onclick="addNumber(9);" > 9 </button>  </td>
+		<td> <button type="button" onclick="addDigit(7);" > 7</button>  </td>
+		<td> <button type="button" onclick="addDigit(8);" > 8 </button>  </td>
+		<td> <button type="button" onclick="addDigit(9);" > 9 </button>  </td>
+		<td> <button type="button" onclick="addDigit('%');" > % </button>  </td>
+
+	</tr>
+	<tr>
+
+		<td> <button type="button" onclick="addDigit(4);" > 4</button>  </td>
+		<td> <button type="button" onclick="addDigit(5);" > 5 </button>  </td>
+		<td> <button type="button" onclick="addDigit(6);" > 6 </button>  </td>
 		<td> <button type="button" onclick="clr();" > C </button>  </td>
 
 	</tr>
 	<tr>
-		<td> <button type="button" onclick="addNumber(4);" > 4 </button>  </td>
-		<td> <button type="button" onclick="addNumber(5);" > 5 </button>  </td>
-		<td> <button type="button" onclick="addNumber(6);" > 6 </button>  </td>
+		<td> <button type="button" onclick="addDigit(1);" > 1 </button>  </td>
+		<td> <button type="button" onclick="addDigit(2);" > 2 </button>  </td>
+		<td> <button type="button" onclick="addDigit(3);" > 3 </button>  </td>
 		<td> <button type="button" onclick="clr();" > CE </button>  </td>
 
 	</tr>
 
 	<tr>
-		<td> <button type="button" onclick="addNumber(0);" > 0 </button>  </td>
-		<td> <button type="button" onclick="addNumber(1);" > 1 </button>  </td>
-		<td> <button type="button" onclick="addNumber(2);" > 2 </button>  </td>
-		<td> <button type="button" onclick="" > = </button>  </td>
+		<td> <button type="button" onclick="addDigit(0);"   > 0 </button>  </td>
+		<td> <button type="button" onclick="addDigit(',');" > , </button>  </td>
+		<td> <button type="button" onclick="result();"      > = </button>  </td>
 
 	</tr>
 
