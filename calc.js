@@ -1,77 +1,43 @@
-function clr() {
-	v = document.getElementById('values');
-	v.value ="";
-}
-function deleteOne() {
-	v= document.getElementById('values');
-	oldValue= v.value;
-	newValue= oldValue.slice(0,(oldValue.length-1))
-	v.value=newValue;
-}
-function addDigit(digit) {
-	v= document.getElementById('values');
-	oldValue=v.value;
-	newValue=oldValue+digit;
-	v.value=newValue;
-}
-//
-//return result to press equals (=)
-//
-function result() {
 
-	v=document.getElementById('values');
 
- 	//check if is well formed.
-	alert("Entre a result 1");
-	
-	wellFormed = wellFormedParam(v.value);
-	check=v.value;
+$(document).ready(function (e) {
 
-	if(wellFormed){
-		var sign=[];
-		var position=0;
-		var terms=[];
-		for(var i=0 ; i<check.length ; i++){
-				
-		}		
+	alert('document ready')
+
+	var form=[];
+	//capture numbers
+	$("#0,#1,#2,#3,#4,#5,#6,#7,#8,#9").click(function () {
 		
-	}else{
-		alert("Expresion mal formada");	
-	}
-//	alert("pase por aqui");
-}
-//
-//@param digit
-// return truee iff digit is a math operation
-//
-function isOperation(digit) {
-	var isOp=false;
-	if (digit=='/' || digit=='+' || digit=='-' || digit=='*' || digit=='%' ){
-		isOp=true;
-	}
-	return isOp;
-}
-//
-//@param check
-//return true iff check not glue math sign and limit not are math sign.
-function wellFormedParam(check) {
-	var wellFormed=false;
-	alert("entre a funcion wellFormedParam");
-	for (var i = 0; i< check.length-1 ; i++) {
+		var value = $(this).val();
+		var box = $("#values").val();
+
+		$("#values").val(box + value);
+	})		
+	//capture signs
+	$("#sum,#rest,#div,#mult,#porc").click(function () {
+		var input = $("#values").val();
+		form.push(input);
 		
-		var b = (check[i]==','|| check[i]=='*' ||check[i]=='-' || check[i]=='/' || check[i]=='+' ||check[i]=='%');
-		var bb= (check[i+1]=='*' ||check[i+1]=='-' || check[i+1]=='/' || check[i+1]=='+' ||check[i+1]=='%');
-		//glued sign 
-		if (! (b && bb) ){
-			wellFormed=true;
-		}
-		b=(check[0]==',' || check[0]=='*' ||check[0]=='-' || check[0]=='/' || check[0]=='+' ||check[0]=='%');
-		bb=(check[0]==',' || check[check.length-1]=='*' ||check[check.length-1]=='-' || check[check.length-1]=='/' || check[check.length-1]=='+' ||check[check.length-1]=='%');
-		//first sign , last sign
-		if (b || bb){
-			wellFormed=false;
-		}
-	}
-	alert("end wellFormedParam");
-	return wellFormed;
-}
+		$("#values").val("");
+		form.push($(this).val());
+		alert(form)
+
+	})
+	//clear input
+	$("#C").click(function () {
+		form=[];
+		$("#values").val("");
+	})
+	//delete one
+	$("#x").click( function () {
+		
+		oldValue=$("#values").val()
+		newValue= oldValue.slice(0,(oldValue.length-1) )
+
+		$("#values").val(newValue);
+
+	})
+	//
+
+		
+})

@@ -8,59 +8,61 @@
 	<script src="js/jquery-3.1.1.min.js" > </script>
 	<script src= "calc.js"> </script>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
 
 </head>
 <body>
- <form>
+ <form class="form-group">
 	<h1>Calculator</h1>
 	
 	
 	<table id="table">
-	<tr colspan="3"><input type="text" name="values" id="values"> </tr>
+	<tr colspan="3"><input type="text" value="" id="values"> </tr>
 
 	<tr>
-		<td> <button type="button" onclick="addDigit('+');" > + </button>  </td>
-		<td> <button type="button" onclick="addDigit('-');" > - </button>  </td>
-		<td> <button type="button" onclick="addDigit('*');" > * </button>  </td>
-		<td> <button type="button" onclick="addDigit('/');" > / </button>  </td>
+		<td> <input type="button" class="btn btn-info" value="+" id="sum" /> </td>
+		<td> <input type="button" class="btn btn-info"  value="-" id="rest"/>  </td>
+		<td> <input type="button" class="btn btn-info" value="*" id="mult" />  </td>
+		<td> <input type="button" class="btn btn-info" value="/" id="div"/>  </td>
 
 
 	</tr>
 	<tr>
 
-		<td> <button type="button" onclick="addDigit(7);" > 7</button>  </td>
-		<td> <button type="button" onclick="addDigit(8);" > 8 </button>  </td>
-		<td> <button type="button" onclick="addDigit(9);" > 9 </button>  </td>
-		<td> <button type="button" onclick="addDigit('%');" > % </button>  </td>
+		<td> <input type="button" class="btn btn-success" value="7" id="7" />  </td>
+		<td> <input type="button" class="btn btn-success" value="8" id="8" />  </td>
+		<td> <input type="button" class="btn btn-success" value="9" id="9" />  </td>
+		<td> <input type="button" class="btn btn-info" value="%" id="porc" />  </td>
 
 	</tr>
 	<tr>
 
-		<td> <button type="button" onclick="addDigit(4);" > 4</button>  </td>
-		<td> <button type="button" onclick="addDigit(5);" > 5 </button>  </td>
-		<td> <button type="button" onclick="addDigit(6);" > 6 </button>  </td>
-		<td> <button type="button" onclick="clr();" > C </button>  </td>
+		<td> <input type="button" class="btn btn-success" value="6" id="6" /> </td>
+		<td> <input type="button" class="btn btn-success"  value="5" id="5"/> </td>
+		<td> <input type="button" class="btn btn-success"  value="4" id="4" />  </td>
+		<td> <input type="button" class="btn btn-warning" value="C" id="C" /> </td>
 
 	</tr>
 	<tr>
-		<td> <button type="button" onclick="addDigit(1);" > 1 </button>  </td>
-		<td> <button type="button" onclick="addDigit(2);" > 2 </button>  </td>
-		<td> <button type="button" onclick="addDigit(3);" > 3 </button>  </td>
-		<td> <button type="button" onclick="clr();" > CE </button>  </td>
+		<td> <input type="button" class="btn btn-success" value="3" id="3" />  </td>
+		<td> <input type="button" class="btn btn-success"  value="2" id="2" />  </td>
+		<td> <input type="button" class="btn btn-success"  value="1" id="1" />  </td>
+		<td> <input type="button" class="btn btn-warning" value="<x" id="x" />  </td>
 
 	</tr>
 
 	<tr>
-		<td> <button type="button" onclick="addDigit(0);"   > 0 </button>  </td>
-		<td> <button type="button" onclick="addDigit('.');" > . </button>  </td>
-		<td> <button type="button" onclick="result();"      > = </button>  </td>
+		<td> <input type="button" class="btn btn-success" value="0" id="0" />  </td>
+		<td> <input type="button" class="btn btn-success" value="." id="pto" />  </td>
+		<td> <input type="button" class="btn btn-danger" value="=" id="equal" />  </td>
 
 	</tr>
-
- </form>
 
 
 	</table>
+ </form>
+
 </body>
 </html>
