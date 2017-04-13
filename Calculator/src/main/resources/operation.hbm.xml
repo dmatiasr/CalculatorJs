@@ -1,0 +1,10 @@
+<hibernate-mapping>
+
+<class name="com.calculator.model.Operation" table="operation">
+
+<id column="id" name="id"></id>
+
+<property name="representation"/>
+
+</class>
+</hibernate-mapping>
