@@ -37,6 +37,7 @@ $(document).ready(function (e) {
 	})
 
 	$("#mostrar").click(function (argument) {
+		
 		$.ajax({
 			url:"http://localhost:8080/calculator/"
 		}).then(function (data) {
