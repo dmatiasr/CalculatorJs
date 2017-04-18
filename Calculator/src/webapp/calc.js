@@ -36,13 +36,29 @@ $(document).ready(function (e) {
 
 	})
 
-	$("#mostrar").click(function (argument) {
-		
-		$.ajax({
-			url:"http://localhost:8080/calculator/"
-		}).then(function (data) {
-			alert(data);
-		})
+	$("#mostrar").click(function () {
+
+		if ( $( "#calculos:first" ).is( ":hidden" ) ) {
+    		$("#calculos").slideDown("slow", function () {
+			$.getJSON("http://localhost:8080/calculator/").done(function (data) {
+				$.each(data, function (key, item) {
+					$('<li>', {text: item.representation }).appendTo($('#calculos') ) ;
+				})
+			})	
+	
+		})	
+  		}else{
+  			$("#calculos").slideUp();	
+  		}
+	})
+
+	$("#guardar").click(function () {
+		var exp = $("#expression").val();
+		alert("para guardar "+exp)
+		$.post("http://localhost:8080/calculator/create",
+			exp).done(function (data) {
+				alert("Data: "+data);
+			});
 	})
 	
 
