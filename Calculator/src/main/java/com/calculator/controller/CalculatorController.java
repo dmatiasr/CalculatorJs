@@ -35,10 +35,13 @@ public class CalculatorController {
 	
 	@RequestMapping(value="/create", method=RequestMethod.POST)
 	public String create (@RequestBody String json){
-		
+		System.out.println("JEYSON : ---------->>>>>>>>>> "+json);
 		if (json==null || json.equals("")) return ""+false;
-		Operation op = new Gson().fromJson(json, Operation.class);
-		boolean res = daoc.create(new Operation(op.getRepresentation()));
+		
+		//Operation op = new Gson().fromJson(json, Operation.class);
+		//System.out.println("OPERATION -->>>>>> "+op);
+		boolean res = daoc.create(new Operation( json ));
+		System.out.println("CREADO >>>>>>>>>>>> "+res);
 		return ""+res;
 	}
 	
